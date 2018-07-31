@@ -4591,6 +4591,46 @@ class SaldosCuentaIndividualController extends ControladorBase{
 	
 	
 	
+	public function attachmentdos(){
+	
+		
+		if($fec=="dic_2017"){
+		
+		
+			$directorio = $_SERVER ['DOCUMENT_ROOT'];
+		
+			$mi_pdf = $directorio.'/documentos/PRESENTACION WEB DIC-2017.pdf';
+		
+			if(file_exists($mi_pdf))
+			{
+		
+				$funcion = "consulta_documentos";
+				$parametros = " '$id_usuarios', 'Estados Financieros al 31 de Diciembre del 2017'";
+				$consulta_documentos->setFuncion($funcion);
+				$consulta_documentos->setParametros($parametros);
+				$resultado=$consulta_documentos->Insert();
+		
+		
+				header('Content-type: application/pdf');
+				header('Content-Disposition: inline; filename="'.$mi_pdf.'"');
+				readfile($mi_pdf);
+			}else
+			{
+				echo 'ESTIMADO PARTICIPE SE PRESENTAN INCONVENIENTES PARA ABRIR EL PDF, INTENTELO MAS TARDE.';
+			}
+		
+		
+		}
+		
+	
+	
+	
+	}
+	
+	
+	
+	
+	
 	
 	
 

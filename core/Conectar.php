@@ -39,7 +39,7 @@ class Conectar{
         	
         	try
         	{
-        		$pdo = new PDO('pgsql:host=192.168.1.128;port=5432;dbname=web_capremci', 'postgres', 'Capremci2018' );
+        		$pdo = new PDO('pgsql:host=18.218.148.189;port=5432;dbname=web_capremci', 'postgres', 'Capremci2018' );
             	
             
          

@@ -3592,6 +3592,20 @@ public function index(){
     	
     }
 
+
+    
+    public function web(){
+    	  		 
+    		$this->view("web",array(
+    				"resultSet"=>""
+    		));
+    		 
+    		 
+    		
+    
+    	
+    	 
+    }
     
    
     
